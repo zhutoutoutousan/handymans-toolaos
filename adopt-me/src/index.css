@@ -1,3 +1,5 @@
+/* -----------------------------Root------------------------------------- */
+
 * {
   box-sizing: border-box;
   color: #333;
@@ -10,6 +12,9 @@ body {
   font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+
 header > a,
 #root > div > h1 {
   display: inline-block;
@@ -19,6 +24,8 @@ header > a,
   overflow: hidden;
   text-indent: -9999px;
 }
+
+/* -----------------------------Root------------------------------------- */
 
 .search {
   background-color: #d9c148;
@@ -82,6 +89,50 @@ header > a,
   border: 1px solid cornflowerblue;
 }
 
+/* -------------- Search results --------------- */
+
 .pet {
   width: 100%;
+  height: 130px;
+  display: block;
+  overflow: hidden;
+  margin: 25px 0;
+  border-bottom: #bf9b2f 1px solid;
 }
+
+.pet h1 {
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 30px;
+  color: #bf3334;
+  width: 95%;
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+.pet h2 {
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+.info {
+  float: left;
+  width: 80%;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image-container {
+  clip-path: circle(50% at 50% 50%);
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0px 20px 0px 10px;
+}
+
+/* -------------- Search results --------------- */
