@@ -25,6 +25,24 @@ header > a,
   text-indent: -9999px;
 }
 
+header a {
+  color: #bf3334;
+  font-size: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+}
+
+header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 1100px;;
+  margin: 0 auto;
+  padding: 20px 0px 0px 0px;
+}
+
 /* -----------------------------Root------------------------------------- */
 
 .search {
