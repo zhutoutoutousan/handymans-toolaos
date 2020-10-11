@@ -18,10 +18,12 @@ const App = () => {
   //     React.createElement(Pet, { name: "Doink", animal: "Cat", breed: "Mixed" }),
   //     ]);
   return (
+    <React.StrictMode>
     <div>
       <h1 id="something-important">Adopt Me!</h1>
       <SearchParams />
     </div>
+    </React.StrictMode>
   );
 };
 
