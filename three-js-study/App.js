@@ -1,7 +1,9 @@
 
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
-let loader = new THREE.ObjectLoader();
+
+let loader = new GLTFLoader();
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 45 , window.innerWidth / window.innerHeight, 3, 3000);
 let renderer = new THREE.WebGLRenderer();
@@ -11,17 +13,17 @@ document.body.appendChild( renderer.domElement );
 // Load a obj resource
 loader.load(
 	// resource URL
-	'Bee.json',
+	'scene.gltf',
 	// called when the resource is loaded
 	function ( obj ) {
 
 		scene.add( obj );
 
-		obj.animations; // Array<THREE.AnimationClip>
-		obj.scene; // THREE.Group
-		obj.scenes; // Array<THREE.Group>
-		obj.cameras; // Array<THREE.Camera>
-		obj.asset; // Object
+		// obj.animations; // Array<THREE.AnimationClip>
+		// obj.scene; // THREE.Group
+		// obj.scenes; // Array<THREE.Group>
+		// obj.cameras; // Array<THREE.Camera>
+		// obj.asset; // Object
 
 	},
 	// called while loading is progressing
