@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Web workers</h1>
+    </header>
+    <main>
+        <pre id="output"></pre>
+    </main>
+    <script>
+        let output = document.getElementById('output');
+        let worker;
+
+        document.addEventListener('DOMContentLoaded', init);
+
+        function init() {
+            worker = new Worker('web-worker.js');
+            worker.addEventListener('message', workerMessaged);
+            worker.addEventListener('error', workerError);
+
+            worker.postMessage('Get Started');
+
+            output.addEventListener('click', () => {
+                // send another message to the worker
+                worker.postMessage('Other');
+            })
+        }
+
+        function workerMessaged(ev) {
+            let data = ev.data;
+            
+            output.textContent += data + '\n';
+        }
+
+        function workerError(err) {
+            console.log(err.message, err.filename);
+        }
+    </script>
+</body>
+</html>
