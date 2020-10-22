@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely tank</title>
+</head>
+<body>
+    <canvas id="lovely"></canvas>
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.121.1/build/three.module.js';
+
+        function main() {
+            //init
+            const canvas = document.querySelector('#lovely');
+            const renderer = new THREE.WebGLRenderer({canvas});
+            renderer.setClearColor(0xAAAAAA); // Gray
+            renderer.shadowMap.enabled = true;
+
+            // Configure camera
+            const fov = 50;
+            const aspect = 4;
+            const near = 0.2;
+            const far = 2000;
+            const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+            camera.position.set(0, 50, 0);
+            camera.up.set(0, 0, 1);
+            camera.lookAt(0, 0, 0);
+
+            const scene = new THREE.Scene();
+
+            // Configure light
+            {
+                const light = new THREE.DirectionalLight(0xffffff, 1);
+            }
+
+
+            function render(time) {
+                // Move Target
+                // Where do I position the `time`?
+                targetOrbit.rotation.y = time * .27;
+                targetBob.position.y = Math.sin(time * 2) * 4;
+                targetMesh.rotation.x = time * 7;
+                targetMesh.rotation.y = time * 13;
+                targetMaterial.emissive.setHSL(time * 10 % 1, 1, .25);
+                
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        }
+
+        main();
+    </script>
+</body>
+</html>
