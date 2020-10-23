@@ -9,13 +9,11 @@ const newFunction = (inputString) => {
 }
 
 
+
+
 // This is the old function
-
-
-
 {
-
-
+    
     // oldFunction('Old piece of shit');      // VM240:18 Uncaught TypeError: oldFunction is not a function
 
     var oldFunction = function(inputString) {
