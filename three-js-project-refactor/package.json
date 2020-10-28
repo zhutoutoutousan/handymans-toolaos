@@ -4,6 +4,7 @@
     "description": "this shit doesn't deserve any description",
     "main": "scripts.js",
     "scripts": {
+        "start": "node index.js",
         "test": "npm test",
         "dev": "nodemon index.js"
     },
