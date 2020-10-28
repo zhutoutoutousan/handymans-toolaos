@@ -1,0 +1,17 @@
+{
+    "name": "i-suck-cock-for-fun",
+    "version": "0.0.1",
+    "description": "this shit doesn't deserve any description",
+    "main": "scripts.js",
+    "scripts": {
+        "test": "npm test",
+        "dev": "nodemon index.js"
+    },
+    "author": "StupidPieceOfShit",
+    "dependencies": {
+        "express": "^4.15.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}

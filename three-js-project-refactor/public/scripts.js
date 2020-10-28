@@ -1,29 +1,4 @@
-<!-- Check your GG Drive for that gallary.glb -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test project</title>
-    <link rel="stylesheet" href="./css/page.css">
-</head>
-<body>
-    <section id="loading-screen">
-        <div id="loading-progress">0% loaded</div>
-        <div id="loader"></div>
-    </section>
-
-    <script src="./tmp-lib/stats.js"></script>
-    <!-- <script type="module" src="tmp-lib/OrbitControls.js"></script> -->
-    <script type="module" id="example">
-
-        // Find the latest version by visiting https://unpkg.com/three. The URL will
-        // redirect to the newest stable release.
-        import * as THREE from 'https://unpkg.com/three@0.121.1/build/three.module.js';
-        import { GLTFLoader } from 'https://unpkg.com/three@0.121.1/examples/jsm/loaders/GLTFLoader.js';
-        import { FirstPersonControls } from 'https://unpkg.com/three@0.121.1/examples/jsm/controls/FirstPersonControls.js';
-        import '/tmp-lib/physi.js';
 
         // Configure physics engine
         window.Physijs.scripts.worker = '/tmp-lib/physijs_worker';
@@ -55,7 +30,7 @@
 
 
         // Init scene
-        var loader = new GLTFLoader(loadingManager);
+        var loader = new THREE.GLTFLoader(loadingManager);
         var scene = new Physijs.Scene;
         var camera = new THREE.PerspectiveCamera( 45 , window.innerWidth / window.innerHeight, 3, 3000);
         var clock = new THREE.Clock();
@@ -95,7 +70,7 @@
 
 
         // Fly control
-        var controls = new FirstPersonControls( camera, renderer.domElement );
+        var controls = new THREE.FirstPersonControls( camera, renderer.domElement );
 
         controls.movementSpeed = 10;
         controls.lookSpeed = 0.125;
@@ -108,7 +83,7 @@
         // Load a obj resource
         loader.load(
             // resource URL
-            'gallary.glb',
+            './assets/gallary.glb',
             // called when the resource is loaded
             function ( gltf ) {
 
@@ -155,6 +130,3 @@
         }
 
         animate();
-      </script>
-</body>
-</html>
