@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language support practice</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ $t("message.hello") }}</p>
+        <button class="toggle-language">{{$t("message.toggle")}}</button>
+    </div>
+</body>
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        font-weight: 62.5%;
+    }
+
+    #app {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        font-size: 2rem;
+    }
+
+    .toggle-language {
+        margin: 0 auto;
+        width: 5rem;
+        height: 5rem;
+        font-size: 1rem;
+    }
+</style>
+<script>
+// If using a module system(e.g. via vue-cli), import Vue and VueI18n and then call Vue.use(VueI18n).
+// import Vue from 'vue'
+// import VueI18n from 'vue-i18n'
+
+// Vue.use(VueI18n)
+
+// Ready translated locale messages
+const messages = {
+    en: {
+        message: {
+            hello: 'hello world',
+            toggle: 'Click me to toggle language!'
+        }
+    },
+    ch: {
+        message: {
+            hello: '你好，世界',
+            toggle: '点我转换语言'
+        }
+    }
+}
+
+// Create VueI18n instance with options
+const i18n = new VueI18n({
+    locale: 'en', // set locale
+    messages // set locale languages
+})
+
+
+const testVue = new Vue();
+// Create a Vue instance with 'i18n' option
+const app = new Vue({ i18n })
+app.$mount('#app')
+
+i18n.locale = 'ch';
+
+
+// Toggle language
+const button = document.getElementsByClassName('toggle-language')[0];
+const toggleLanguage = () => {
+
+console.log(i18n)
+    const isEnglish = i18n.locale === "en";
+    const isChinese = i18n.locale === "ch";
+
+    i18n.locale = isEnglish ? "ch":
+                    isChinese ? "en" : "ch"
+}
+
+button.addEventListener('click', toggleLanguage)
+
+
+// Now the app has started!
+</script>
+</html>
