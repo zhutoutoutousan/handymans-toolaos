@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex-flexbox practice</title>
+</head>
+<style>
+/* Media query tips
+    Adjust the height 
+ */
+
+:root {
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: black;
+    font-size: 62.5%;
+}
+
+section {
+    position: relative;
+    width: 100%;
+
+}
+
+.target-topictext-title {
+    font-size: 8rem;
+}
+
+.target-topic-text-container {
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    width: 40%;
+
+    left: 10%;
+    bottom: -45%;
+    
+}
+
+.target-hero-image-container {
+    height: 50%;
+}
+
+.target-side-image-container {
+    float: right;
+    margin-right: 15rem;
+    margin-top: 15rem;
+}
+
+.target-side-image {
+    width: 100%;
+}
+
+</style>
+<body>
+    <section>
+        <div class="target-container">
+            <div class="target-hero-image-container">
+                <img src="./img/industry-11.png" alt="哈哈啊哈" class="target-hero-image">
+            </div>
+
+            <div class="target-side-image-container">
+                <img src="./img/industry-12.png" alt="" class="target-side-image">
+            </div>
+
+            <div class="target-topic-text-container">
+                <p class="target-topictext-title">
+                    展馆
+                    <br>
+                    Exhibition Hall
+                </p>
+                <p>
+                    改变传统展馆的体验方式，从1.0的纯观看时代，进步到5.0的全交互式体验，在数字科技的帮助下，让观众更为直观的体验到展示的内容。
+                </p>
+            </div>
+
+            <div class="target-textfill-container">
+                <p class="target-textfill">
+                    从传统图文展示方式向交互式多媒体展示演变。
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
