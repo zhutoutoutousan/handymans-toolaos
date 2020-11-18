@@ -1,8 +1,3 @@
-
-
-
-
-
             // Configure loading screen
             var loadingScreenText = document.getElementById('loading-progress');
             var pageLoadingState = false;
