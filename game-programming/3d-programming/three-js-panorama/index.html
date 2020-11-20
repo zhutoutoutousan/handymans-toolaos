@@ -7,6 +7,29 @@
 </head>
 <body>
     <div class="container"></div>
-    
+
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/browse/three@0.120.0/build/three.module.js';
+
+        let camera, scene, renderer;
+
+        let isUserInteracting = false,
+            onPointerDownMouseX =  0, onPointerDownMouseY = 0,
+            lon = 0,
+            lat = 0,
+            onPointerDownLon = 0,
+            onPointerDownLat = 0,
+            phi = 0,
+            theta = 0;
+
+        function init() {
+            const container = document.getElementById('container');
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+        }
+        
+            
+
+    </script>
 </body>
 </html>

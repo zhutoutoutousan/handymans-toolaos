@@ -32,7 +32,7 @@
         // Init scene
         var loader = new THREE.GLTFLoader(loadingManager);
         var scene = new Physijs.Scene;
-        var camera = new THREE.PerspectiveCamera( 45 , window.innerWidth / window.innerHeight, 3, 3000);
+        var camera = new THREE.PerspectiveCamera( 45 , window.innerWidth / window.innerHeight, 0.1, 3000);
         var clock = new THREE.Clock();
         
 
