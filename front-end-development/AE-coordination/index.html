@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    object-fit: cover;
+}
+
+.show {
+    opacity: 1;
+}
+
+.control-container {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+}
+
+</style>
+<body>
+    <div class="control-container">
+        <button class="tocity2">
+            CITY2
+        </button>
+        <button class="tocity3">
+            CITY3
+        </button>
+    </div>
+    <div class="image-container">
+        <img src="./city1.jpeg" alt="" id="city1" class="show">
+        <img src="./city2.jpeg" alt="" id="city2">
+        <img src="./city3.jpeg" alt="" id="city3">    
+    </div>
+    <script>
+        let button1 = document.getElementsByClassName('tocity2');
+        let button2 = document.getElementsByClassName('tocity3');
+        let city1 = document.getElementById('city1');
+        let city2 = document.getElementById('city2');
+        let city3 = document.getElementById('city3');
+
+        const toCity2 = () => {
+            city1.style.opacity = 0;
+            city3.style.opacity = 0;
+            city2.style.opacity = 1;
+        }
+
+        const toCity1 = () => {
+            city1.style.opacity = 1;
+            city3.style.opacity = 0;
+            city2.style.opacity = 0;
+        }
+
+        const toCity3 = () => {
+            city1.style.opacity = 0;
+            city3.style.opacity = 1;
+            city2.style.opacity = 0;
+        }
+
+        button1[0].addEventListener('click',toCity2);
+        button2[0].addEventListener('click',toCity3);
+    </script>
+</body>
+</html>
