@@ -1,0 +1,6 @@
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\bin\Debug\test-project.exe.config
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\bin\Debug\test-project.exe
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\bin\Debug\test-project.pdb
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\obj\Debug\test-project.csprojAssemblyReference.cache
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\obj\Debug\test-project.exe
+D:\Github\code-playground\code-playground\game-programming\csp-study\vs-test\test-project\obj\Debug\test-project.pdb
