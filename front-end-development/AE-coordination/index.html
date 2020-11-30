@@ -10,10 +10,27 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-size: 62.5%;
+    margin: 0;
+
+    background: url(https://media.giphy.com/media/10HacXwBbnkUec/giphy.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.image-container {
+    margin: 0;
+    height: 100%;
+    width: 80%;
+    float: right;
+    box-shadow: 10% 10% 10% 10% black inset;
 }
 
 img {
-    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    float: right;
+    transform: scaleY(1.01);
 }
 
 .show {
@@ -21,15 +38,16 @@ img {
 }
 
 .control-container {
-    position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 20%;
+    height: 100%;
+    float: left;
+    background: url(https://media.giphy.com/media/2dmiD02aM9zX3Gw2oS/giphy.gif) no-repeat;
 }
 
 button {
-    width: 100%;
-    height: 100%;
-    font-size: 5rem;
+    width: 20%;
+    height: 20%;
+    font-size: 1rem;
 }
 
 </style>
@@ -43,37 +61,21 @@ button {
         </button>
     </div>
     <div class="image-container">
-        <img src="./city1.jpeg" alt="" id="city1" class="show">
-        <img src="./city2.jpeg" alt="" id="city2">
-        <img src="./city3.jpeg" alt="" id="city3">    
+        <img src="./city1.jpeg" alt="" id="city" class="show"> 
     </div>
     <script>
         let button1 = document.getElementsByClassName('tocity2');
         let button2 = document.getElementsByClassName('tocity3');
-        let city1 = document.getElementById('city1');
-        let city2 = document.getElementById('city2');
-        let city3 = document.getElementById('city3');
+        let city = document.getElementById('city');
 
-        const toCity2 = () => {
-            city1.style.opacity = 0;
-            city3.style.opacity = 0;
-            city2.style.opacity = 1;
-        }
+        // Param: city1 | city2 | city3
+        const switchCity = (cityDestination) => {
+            city.src = `./${cityDestination}.jpeg`;
+console.log(`Switched to ${cityDestination}`);
+        } 
 
-        const toCity1 = () => {
-            city1.style.opacity = 1;
-            city3.style.opacity = 0;
-            city2.style.opacity = 0;
-        }
-
-        const toCity3 = () => {
-            city1.style.opacity = 0;
-            city3.style.opacity = 1;
-            city2.style.opacity = 0;
-        }
-
-        button1[0].addEventListener('click',toCity2);
-        button2[0].addEventListener('click',toCity3);
+        button1[0].addEventListener('click', switchCity('city2'));
+        button2[0].addEventListener('click', switchCity('city3'));
     </script>
 </body>
 </html>
