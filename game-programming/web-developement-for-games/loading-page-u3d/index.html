@@ -24,17 +24,14 @@
       width: 100%;
     }
 
-    #unity-footer {
-      display: none;
-    }
-
     .loading-container {
       height: 100%;
       width: 100%;
     }
 
     .video-container {
-      height: 9ght
+      height: 100%;
+      width: 100%;
     }
   </style>
   <body>
@@ -48,16 +45,6 @@
     </div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">first-person-shooter</div>
       </div>
     </div>
     <script>
@@ -74,8 +61,9 @@
       };
 
       var container = document.querySelector("#unity-container");
+  
+
       var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
 
@@ -86,21 +74,29 @@
         canvas.style.width = "100%";
         canvas.style.height = "100%";
       }
-      loadingBar.style.display = "block";
 
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
+
+        setTimeout(() => {
+            createUnityInstance(canvas, config, (progress) => {
+              // This is where you manipulate the loading page
+
+
+            progressBarFull.style.width = 100 * progress + "%";
+          }).then((unityInstance) => {
+
+            // This is when the loading is done
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }).catch((message) => {
+            alert(message);
+          });
+        }, 20000)
+
+
       };
       document.body.appendChild(script);
     </script>
