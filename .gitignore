@@ -1,4 +1,13 @@
+# Configurations
 .vscode
 .vs
+
+# Packages
 node_modules
+
+# 3D files
 *.glb
+*.wasm
+*.data
+*.framework.js
+*.loader.js
