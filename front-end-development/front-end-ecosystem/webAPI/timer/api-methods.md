@@ -1,0 +1,3 @@
+# Resources
+- [菲利普·罗伯茨：到底什么是Event Loop呢？ | 欧洲 JSConf 2014](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+- [Better Understanding of Timers in JavaScript: SetTimeout vs RequestAnimationFrame](https://medium.com/javascript-in-plain-english/better-understanding-of-timers-in-javascript-settimeout-vs-requestanimationframe-bf7f99b9ff9b#:~:text=setTimeout%20%E2%80%94%20a%20function%20that%20calls,an%20expression%20at%20specifed%20intervals.&text=requestAnimationFrame%20%E2%80%94%20a%20function%20working%20like,which%20is%20improved%20by%20Mozilla.)
