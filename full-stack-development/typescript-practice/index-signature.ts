@@ -10,6 +10,14 @@ class Foo {
     }
 }
 
+let obj = {
+    toString() {
+        console.log('toString called')
+        return 'Hello'
+    }
+}
+
 let foo: any = {};
-foo['Hello'] = new Foo('World');
-foo['Hello'].log(); // World
+foo[obj] = 'World'; // toString called 
+console.log(foo[obj]); // toString called, World
+console.log(foo['Hello']); // World

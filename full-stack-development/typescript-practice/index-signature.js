@@ -12,6 +12,13 @@ var Foo = /** @class */ (function () {
     };
     return Foo;
 }());
+var obj = {
+    toString: function () {
+        console.log('toString called');
+        return 'Hello';
+    }
+};
 var foo = {};
-foo['Hello'] = new Foo('World');
-foo['Hello'].log(); // World
+foo[obj] = 'World'; // toString called 
+console.log(foo[obj]); // toString called, World
+console.log(foo['Hello']); // World
