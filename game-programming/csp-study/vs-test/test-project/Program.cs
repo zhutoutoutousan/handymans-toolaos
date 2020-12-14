@@ -15,15 +15,10 @@ namespace test_project
         enum DaysOfWeek { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
         DaysOfWeek today; // Indicate the type, and give it a name.
 
-        static int GenerateNumbers(int count)
-        {
-            
-        }
+
         static void Main(string[] args)
         {
-            int[] numbers = GenerateNumbers();
-            Reverse(numbers);
-            PrintNumbers(numbers);
+
 
             Console.WriteLine("Hello World");
             Console.ReadKey();
