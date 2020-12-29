@@ -23,7 +23,7 @@ body {
 }
 
 .unity-mobile {
-  display: none;
+  display: block;
 }
 #unity-webgl-logo {
   float: left;
