@@ -6684,12 +6684,12 @@ var UnityLoader = UnityLoader || {
     function instantiate(container, unityInstance) {
       if (
         typeof container == "string" &&
-        !(container = document.getElementById(container))
+        !(container = document.getElementById(container)) // The `container` refers to the ID of the selected DOM element
       )
         return false;
 
       container.innerHTML = "";
-      container.style.border = container.style.margin = container.style.padding = 0;
+      container.style.border = container.style.margin = container.style.padding = 0; // Don't use this when declaring variables
       if (getComputedStyle(container).getPropertyValue("position") == "static")
         container.style.position = "relative";
       container.style.width = unityInstance.width || container.style.width;
