@@ -27,6 +27,9 @@ function() {
             console.log(xhr.response) // ArrayBuffer
             console.log(new Blob([xhr.response])) // Blob
             downloadedBlob = new Blob([xhr.response]);
+
+
+            
             downloadBlob(downloadedBlob, 'downloadedBlob.fbx');
         }
         else {
