@@ -1,1 +1,0 @@
-sass css-grid.scss css-grid.css
