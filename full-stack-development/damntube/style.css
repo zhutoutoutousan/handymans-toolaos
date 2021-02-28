@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+nav  {
+    height: 8vh;
+    background-color: rgba(14, 13, 13, 0.849);
+    position: sticky;
+    margin: 0;
+}
+
+#burger {
+    position: relative;
+    float: left;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+
+    top: 20%;
+    left: 1%;
+}
+
+.line {
+    position: relative;
+    background-color: white;
+    width: 2rem;
+    height: 0.3rem;
+    margin: 0.3rem 0;
+}
