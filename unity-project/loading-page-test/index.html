@@ -33,11 +33,15 @@
 
     .intro {
       position: absolute;
+      height: 100vh;
+      width: 100vw;
       left: 0;
       right: 0;
       bottom: 0;
       top: 0px;
       overflow-y: scroll;
+
+      z-index: 998;
     }
 
     #progress-bar {
@@ -54,9 +58,15 @@
       text-align: center;
       z-index: 999;
       
-
     }
 
+    .progress .Dark {
+      display: none;
+    }
+
+    .logo .Dark {
+      display: none;
+    }
   </style>
   </head>
   <body>
@@ -65,17 +75,18 @@
         <div class="footer" display="none">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">ZhanTing</div>
+          <div class="title">Check this shit!</div>
         </div>
     </div>
     <div id="intro">
-      <iframe 
+      asdfsdf
+      <!-- <iframe 
         width="100%" 
         height="3000px" 
         frameborder="0" 
         src="./loading-page/index.html"
-        ></iframe>
+        ></iframe> -->
     </div>
-    <div id="progress-bar">LOADING:</div>
+    <!-- <div id="progress-bar">LOADING:</div> -->
   </body>
 </html>
