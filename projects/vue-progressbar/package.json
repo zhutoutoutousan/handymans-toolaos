@@ -1,8 +1,0 @@
-{
-  "name": "vue-progressbar",
-  "version": "1.0.0",
-  "description": "Simple vue-progressbar",
-  "main": "index.js",
-  "author": "Tian Shao",
-  "license": "MIT"
-}
