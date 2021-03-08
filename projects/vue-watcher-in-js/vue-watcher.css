@@ -26,7 +26,10 @@ nav img {
 }
 
 .button {
+    color: black;
     margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
     text-decoration: none;
     font-size: 3rem;
 }
