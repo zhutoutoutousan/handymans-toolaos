@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <h1 class="title">学生宿舍管理系统</h1>
+      <h1 class="title">员工宿舍管理系统</h1>
       <p class="lead">基于Vue.js(ElementUI)+Node.js(Express)+Mongodb(mongoose)开发</p>
     </div>
   </div>

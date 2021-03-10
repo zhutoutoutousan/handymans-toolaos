@@ -69,7 +69,7 @@ module.exports = function (app) {
     //图片上传
     router.post("/uploads", authAdmin, upload.single("file"), (req, res) => {
         const file = req.file;
-        file.url = `http://127.0.0.1:8888/public/${file.filename}`;
+        file.url = `http://121.4.146.70:8888/public/${file.filename}`;
         res.send(file);
     });
 
@@ -196,7 +196,7 @@ module.exports = function (app) {
             }
         }
         //设置默认图像
-        hs.avatar="http://127.0.0.1:8888/public/defalut.png";
+        hs.avatar="http://121.4.146.70:8888/public/defalut.png";
         try {
             temp = await HousemasterModel.create(hs);
             result = await BFModel.findByIdAndUpdate(hs.management, {status: 1});//更新楼栋信息

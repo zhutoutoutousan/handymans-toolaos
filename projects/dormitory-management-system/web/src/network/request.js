@@ -21,7 +21,7 @@ function endLoading() {
 export function requestHouseMasterData(config) {
   //1.创建axios实例
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8888/api/housemaster',
+    baseURL: 'http://121.4.146.70:8888/api/housemaster',
     timeout: 5000
   });
 
@@ -62,7 +62,7 @@ export function requestHouseMasterData(config) {
 export function requestStudentData(config) {
   //1.创建axios实例
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8888/api/student',
+    baseURL: 'http://121.4.146.70:8888/api/student',
     timeout: 5000
   });
 

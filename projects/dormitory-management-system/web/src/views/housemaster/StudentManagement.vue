@@ -7,7 +7,7 @@
       <div class="bt-right">
         <el-button type="primary" @click="handleAdd">添加信息</el-button>
         <el-button type="success" @click="handleAllInfo" class="show-all">查看所有</el-button>
-        <el-input placeholder="请输入要查找的学生的学号" v-model="keywords" class="input-with-select search-left">
+        <el-input placeholder="请输入要查找的员工的工号" v-model="keywords" class="input-with-select search-left">
           <el-button slot="append" icon="el-icon-search" @click="handleSearch"></el-button>
         </el-input>
       </div>
@@ -164,9 +164,9 @@
     data() {
       let checkSno = (rule, value, callback) => {
         if (value === '') {
-          callback(new Error('请输入学号'));
+          callback(new Error('请输入工号'));
         } else if (value.trim().length !== 12) {
-          callback(new Error("学号的长度必须为12"));
+          callback(new Error("工号的长度必须为12"));
         } else {
           callback();
         }
@@ -202,7 +202,7 @@
         },
         rules: {
           sno: [
-            {required: true, message: "请输入学号", trigger: "blur"},
+            {required: true, message: "请输入工号", trigger: "blur"},
             {validator: checkSno, trigger: "blur"},
           ],
           name: [
@@ -218,7 +218,7 @@
     methods: {
       //处理添加信息，打开模态框
       handleAdd() {
-        this.dialogInfo.title = "添加学生信息";
+        this.dialogInfo.title = "添加员工信息";
         for (let key in this.houseInfo) {//置空数据添加
           this.houseInfo[key] = null;
         }

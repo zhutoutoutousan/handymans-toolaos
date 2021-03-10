@@ -97,7 +97,7 @@ module.exports = function (app) {
   //图片上传
   router.post("/uploads", authHouseMaster, upload.single("file"), (req, res) => {
     const file = req.file;
-    file.url = `http://127.0.0.1:8888/public/${file.filename}`;
+    file.url = `http://121.4.146.70:8888/public/${file.filename}`;
     res.send(file);
   });
 
@@ -433,7 +433,7 @@ module.exports = function (app) {
    */
   router.post("/student", authHouseMaster, async (req, res) => {
     //设置默认头像
-    req.body.avatar = "http://127.0.0.1:8888/public/defalut.png";
+    req.body.avatar = "http://121.4.146.70:8888/public/defalut.png";
     req.body.bf_id = req.currentUser.management;//设置楼栋信息
     //先查询出宿舍的剩余位置减一
     const obj = await dormitory.findById(req.body.dormitory);

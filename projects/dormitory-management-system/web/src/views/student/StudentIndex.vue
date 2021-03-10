@@ -2,7 +2,7 @@
   <div class="index-container">
     <div class="layui-layout layui-layout-admin">
       <div class="layui-header">
-        <router-link tag="div" class="layui-logo" to="/student/index" style="cursor: pointer">学生宿舍管理系统
+        <router-link tag="div" class="layui-logo" to="/student/index" style="cursor: pointer">员工宿舍管理系统
         </router-link>
         <ul class=" layui-nav layui-layout-right">
           <li class="layui-nav-item">

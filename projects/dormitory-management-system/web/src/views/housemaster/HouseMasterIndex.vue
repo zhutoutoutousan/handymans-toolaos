@@ -2,7 +2,7 @@
   <div class="index-container">
     <div class="layui-layout layui-layout-admin">
       <div class="layui-header">
-        <router-link tag="div" class="layui-logo" to="/housemaster/index" style="cursor: pointer">学生宿舍管理系统
+        <router-link tag="div" class="layui-logo" to="/housemaster/index" style="cursor: pointer">员工宿舍管理系统
         </router-link>
         <ul class=" layui-nav layui-layout-right">
           <li class="layui-nav-item">
@@ -32,7 +32,7 @@
                 <el-menu-item index="/housemaster/dormitory/info">宿舍基本信息管理</el-menu-item>
                 <el-menu-item index="/housemaster/health/info">宿舍卫生管理</el-menu-item>
                 <el-menu-item index="/housemaster/elecharges/info">宿舍电费管理</el-menu-item>
-                <el-menu-item index="/housemaster/student/info">学生信息管理</el-menu-item>
+                <el-menu-item index="/housemaster/student/info">员工信息管理</el-menu-item>
                 <el-menu-item index="/housemaster/notice/info">公告信息管理</el-menu-item>
               </el-menu-item-group>
             </el-submenu>

@@ -1,11 +1,11 @@
 <template>
   <div class="login">
     <div class="title">
-      <h1>学生宿舍管理系统</h1>
+      <h1>员工宿舍管理系统</h1>
     </div>
     <div class="login-box">
       <el-form :model="form" :rules="rules" ref="userInfo" label-width="70px" class="demo-ruleForm">
-        <el-form-item label="学号" prop="sno">
+        <el-form-item label="工号" prop="sno">
           <el-input type="text"  autocomplete="off" v-model="form.sno"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">

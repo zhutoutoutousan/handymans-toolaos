@@ -3,7 +3,7 @@
     <h1>个人信息详情页</h1>
     <div class="content-show">
       <el-form label-width="100px" class="demo-ruleForm">
-        <el-form-item label="学号:">
+        <el-form-item label="工号:">
           <el-input type="text" :value="userInfo.sno"  readonly="readonly" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="用户名:">

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="title">
-      <h1>学生宿舍管理系统</h1>
+      <h1>员工宿舍管理系统</h1>
     </div>
     <div class="login-box">
       <el-form :model="userInfo" :rules="rules" ref="userInfo" label-width="70px" class="demo-ruleForm">

@@ -28,7 +28,7 @@ db.getCollection("admin").insert([ {
     _id: ObjectId("5d7c86dc7ee37325e0160f3c"),
     username: "一梦此间",
     password: "$2y$10$DR8Nl9LoY8qiuNhn0s5H0OhPAMAiW7O02wI3PfIt8TXNSjCDXuyMK",
-    avatar: "http://127.0.0.1:8888/public/41f85d88b7c54c0cc17498a14f1d8662",
+    avatar: "http://121.4.146.70:8888/public/41f85d88b7c54c0cc17498a14f1d8662",
     __v: NumberInt("0")
 } ]);
 
@@ -336,7 +336,7 @@ db.getCollection("housemasters").insert([ {
     email: "2214452605@qq.com",
     management: ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/8011c1587d8ad18eae2495d832fe8217"
+    avatar: "http://121.4.146.70:8888/public/8011c1587d8ad18eae2495d832fe8217"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d8248e016bae1417cbc691b"),
@@ -348,7 +348,7 @@ db.getCollection("housemasters").insert([ {
     email: "2214452605@qq.com",
     management: ObjectId("5d82082b00174d3a4cf22299"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/f1d639f1fc47ab64cf69621ee75874c3"
+    avatar: "http://121.4.146.70:8888/public/f1d639f1fc47ab64cf69621ee75874c3"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82f86cdc6fda38d8b08396"),
@@ -360,7 +360,7 @@ db.getCollection("housemasters").insert([ {
     email: "2214452605@qq.com",
     management: ObjectId("5d82082e00174d3a4cf2229a"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82f8a7a06239511cb4a849"),
@@ -372,7 +372,7 @@ db.getCollection("housemasters").insert([ {
     email: "626059207@qq.com",
     management: ObjectId("5d82083200174d3a4cf2229b"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82f99b8201ac52582f33b0"),
@@ -384,7 +384,7 @@ db.getCollection("housemasters").insert([ {
     email: "18671657580@qq.com",
     management: ObjectId("5d82083700174d3a4cf2229c"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82f9ba8201ac52582f33b1"),
@@ -396,7 +396,7 @@ db.getCollection("housemasters").insert([ {
     email: "123456789",
     management: ObjectId("5d82084800174d3a4cf2229e"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82fd2d5feacf38a0da2273"),
@@ -408,7 +408,7 @@ db.getCollection("housemasters").insert([ {
     email: "1111111111111",
     management: ObjectId("5d82084c00174d3a4cf2229f"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5d82fe73dd4f3f2db8d0b23d"),
@@ -420,7 +420,7 @@ db.getCollection("housemasters").insert([ {
     email: "22222",
     management: ObjectId("5d82084f00174d3a4cf222a0"),
     __v: NumberInt("0"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png"
+    avatar: "http://121.4.146.70:8888/public/defalut.png"
 } ]);
 db.getCollection("housemasters").insert([ {
     _id: ObjectId("5dafaee61a000a0938d66a74"),
@@ -431,7 +431,7 @@ db.getCollection("housemasters").insert([ {
     tel: "18671657580",
     email: "2214452605@qq.com",
     management: ObjectId("5d8b235d5699d92f20d42984"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     __v: NumberInt("0")
 } ]);
 db.getCollection("housemasters").insert([ {
@@ -443,7 +443,7 @@ db.getCollection("housemasters").insert([ {
     tel: "18671657580",
     email: "2214452605@qq.com",
     management: ObjectId("5dafae5eae7ab416a4e1b264"),
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     __v: NumberInt("0")
 } ]);
 
@@ -649,7 +649,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("20"),
     sex: "男",
     password: "987654",
-    avatar: "http://127.0.0.1:8888/public/63ed712b5e8fd61fbdc4335832ef4aec",
+    avatar: "http://121.4.146.70:8888/public/63ed712b5e8fd61fbdc4335832ef4aec",
     dormitory: ObjectId("5dac6125e0635b0bcc1fdfc0"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -661,7 +661,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("19"),
     sex: "男",
     password: "123456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac6125e0635b0bcc1fdfc0"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -673,7 +673,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("20"),
     sex: "男",
     password: "123456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac6125e0635b0bcc1fdfc0"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -685,7 +685,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("20"),
     sex: "男",
     password: "1213456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac6125e0635b0bcc1fdfc0"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -697,7 +697,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("20"),
     sex: "男",
     password: "123456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac612ce0635b0bcc1fdfc1"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -709,7 +709,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("19"),
     sex: "男",
     password: "123456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac612ce0635b0bcc1fdfc1"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
@@ -721,7 +721,7 @@ db.getCollection("student").insert([ {
     age: NumberInt("20"),
     sex: "男",
     password: "123456",
-    avatar: "http://127.0.0.1:8888/public/defalut.png",
+    avatar: "http://121.4.146.70:8888/public/defalut.png",
     dormitory: ObjectId("5dac612ce0635b0bcc1fdfc1"),
     "bf_id": ObjectId("5d82082700174d3a4cf22298"),
     __v: NumberInt("0")
