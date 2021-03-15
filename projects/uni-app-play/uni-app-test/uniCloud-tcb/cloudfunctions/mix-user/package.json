@@ -1,0 +1,19 @@
+{
+	"name": "mix-user",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"config": "file:../common/config",
+		"jsonwebtoken": "^8.5.1",
+		"node-rsa": "^1.1.1",
+		"uni-id": "file:../common/uni-id",
+		"wx-auth": "file:../common/wx-auth"
+	}
+}

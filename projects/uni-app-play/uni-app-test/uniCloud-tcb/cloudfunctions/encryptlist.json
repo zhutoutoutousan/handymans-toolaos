@@ -1,0 +1,11 @@
+{
+	"encryptFunctionList": [
+		"mix-address",
+		"mix-order",
+		"mix-user",
+		"mix-uniapp",
+		"mix-live",
+		"mix-coupon",
+		"mix-sms"
+	]
+}
