@@ -1,0 +1,6 @@
+/* https://stackoverflow.com/questions/12429439/what-are-the-ways-to-prevent-users-to-take-screenshot-of-a-webpage */
+@media print {
+    html, body {
+        display: none; /* hide whole page */
+    }
+}
