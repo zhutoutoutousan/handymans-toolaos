@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="{{host}}/index.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="{{host}}/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Home</h1>
+			<a href="/getallrestaurant"  id="api">Show Restaurants</a>
+			<h1>{{adder}}</h1>
+			
+		</header>
+	<main>
+		<aside>
+			{{#if authorised}}
+				<a href="/logout">Log out</a>
+			{{else}}
+				<a href="/login">Log in</a>
+			{{/if}}
+		</aside>
+		<section>
+			{{#if data}}
+				{{#each data}}
+				<div class="card">
+					<h1>{{name}}</h1>
+					<h2>{{adder}}</h2>
+					<h2>{{date}}</h2>
+					<h2>{{postcode}}</h2>
+					<h2>{{description}}</h2>
+					<h2>{{food}}</h2>
+				</div>
+				{{/each}}
+			{{/if}}
+		</section>
+		{{#if msg}}
+ 			<div class="msg">
+				<p>{{msg}}</p>
+			</div>
+		{{/if}}
+
+		
+		{{#if authorised}}
+			<button class="add" id="add">Add Restaurant</button>
+		{{/if}}
+	</main>
+	<script>
+		const apiTrigger = document.getElementById('api');
+		function once(fn, context) { 
+			var result;
+
+			return function() { 
+				if(fn) {
+					result = fn.apply(context || this, arguments);
+					fn = null;
+				}
+
+				return result;
+			};
+		}
+
+		var canOnlyFireOnce = once(function() {
+			console.log('Fired!');
+			apiTrigger.click();
+		});	
+
+	</script>
+	</body>
+</html>

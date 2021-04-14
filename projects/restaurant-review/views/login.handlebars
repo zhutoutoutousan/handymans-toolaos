@@ -1,0 +1,50 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="{{host}}/login.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="{{host}}/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script>
+
+			var options = {
+			strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+			typeSpeed: 40
+			};
+
+			var typed = new Typed('#login', options);
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1 id="head-line">Critiques des restaurants</h1>
+		</header>
+		{{#if msg}}
+			<aside>
+				<p class="msg">{{msg}}</p>
+
+			</aside>
+		{{/if}}
+		<main>
+			<a href="/" id="currentPage"><strong>HOME</strong></a>
+			<form action="/login" method="post">
+				<p>
+					<label for="user">Username</label><br />
+					<input type="text" name="user" placeholder="your username" value="{{body.user}}" autofocus>
+				</p>
+				<p>
+					<label for="pass">Password</label><br />
+					<input type="password" name="pass" placeholder="your password" value="{{body.pass}}">
+				</p>
+				<input type="hidden" name="referrer" value="{{referrer}}">
+				<p><strong><input type="submit" value="LOGIN"></strong></p>
+			</form>
+			<a href="/register"><strong>REGISTER</strong></a>
+		</main>
+	</body>
+</html>
