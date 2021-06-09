@@ -1,0 +1,11 @@
+{
+  "name": "wtf-is-question-name",
+  "version": "1.0.0",
+  "description": "Some stupid piece of shit project",
+  "main": "index.js",
+  "author": "zhutoutoutousan",
+  "license": "MIT",
+  "dependencies": {
+    "react-admin": "^3.15.2"
+  }
+}
