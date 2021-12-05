@@ -9,3 +9,5 @@ export function checkIfSupportWebGL(canvas) {
     }
     return gl;
 }
+
+
