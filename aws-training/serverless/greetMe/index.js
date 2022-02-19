@@ -49,9 +49,14 @@ const greeting = {
 }
 
 exports.handler = async (event) => {
-    const name = event.pathParameters.name;
-    // get the language from the path
-    let {lang, ...info} = event.queryStringParameters;
+    const name = event.pathParameters.name;    
+    let lang = 'en'
+    let info = ''
+    // read lang from query parameter
+    lang = event.queryStringParameters.lang || 'en';
+    // info is event.queryParameters without lang property
+    info = event.queryStringParameters;
+    delete info.lang;
     let outputText = `${greeting[lang] ? greeting[lang] : greeting['en']} ${name}`;
     if (outputText) {
         return {

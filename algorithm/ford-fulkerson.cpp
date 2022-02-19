@@ -37,7 +37,6 @@ bool bfs(int rGraph[V][V], int s, int t, int parent[]) {
     while (!q.empty()) {
         int u = q.front();
         q.pop();
-
         for (int v = 0; v < V; v++) {
             if(visited[v] == false && rGraph[u][v] > 0) {
                 // If we find a connection to the sink node,
@@ -47,6 +46,5 @@ bool bfs(int rGraph[V][V], int s, int t, int parent[]) {
 
             }
         }
-
     }
 }
