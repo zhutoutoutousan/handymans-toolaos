@@ -1,0 +1,14 @@
+{
+  "name": "handymans-toolaos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jimp": "^0.16.1",
+    "require-tree": "^1.1.1"
+  }
+}
