@@ -2,6 +2,10 @@
 var fs = require('fs');
 var Crawler = require("crawler");
 
+// Create a B tree
+var bTree = require('./bTree.js');
+
+
 
 
 // Create a crawler to fetch all the links in the page and then crawl them, console.log the results, write the results to local file results.txt
