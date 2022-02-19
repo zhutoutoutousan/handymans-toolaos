@@ -15,4 +15,4 @@ echo Uploading to $username
 
 git add .
 git commit -am "Aktualisierung"
-git push git@github.com:$username/code-playground.git
+git push git@github.com:$username/handymans-toolaos.git
