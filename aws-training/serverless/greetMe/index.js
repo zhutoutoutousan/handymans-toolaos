@@ -52,15 +52,23 @@ exports.handler = async (event) => {
     const name = event.pathParameters.name;    
     let lang = 'en'
     let info = ''
-    // read lang from query parameter
-    lang = event.queryStringParameters.lang || 'en';
-    // info is event.queryParameters without lang property
-    info = event.queryStringParameters;
-    delete info.lang;
+    if(event.queryStringParameters?.lang) {
+        // read lang from query parameter
+        lang = event.queryStringParameters.lang || 'en';
+        // info is event.queryParameters without lang property
+        info = event.queryStringParameters;
+        delete info.lang;        
+    }
+    
     let outputText = `${greeting[lang] ? greeting[lang] : greeting['en']} ${name}`;
     if (outputText) {
         return {
             statusCode: 200,
+            // enable cors for https://www.test-cors.org/, https://www.cors-anywhere.herokuapp.com/ 
+            headers: {
+                'Access-Control-Allow-Origin': 'https://www.test-cors.org',
+                'Access-Control-Allow-Credentials': true
+            },
             body: JSON.stringify({
                 message: outputText,
                 info: info,
