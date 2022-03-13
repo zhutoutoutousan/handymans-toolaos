@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-flask-xss</title>
+</head>
+<body>
+    <!-- Hero Image Video-->
+    <div class="hero-image">
+        <!-- Hero Text -->
+        <div class="hero-text">
+            <h1>react-flask-xss</h1>
+        </div>
+    </div>
+</body>
+<script>
+    function httpGetAsync(theUrl, callback)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+        xmlHttp.send(null);
+    }
+
+    // Temp for lack of buttons
+    httpGetAsync("http://127.0.0.1:5000/store", function(response) {
+        alert(response);
+    });
+
+
+</script>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    /* Size adjustment */
+    font-size: 62.5%;
+    /* Margin bottom for footer */
+    margin-bottom: 60px;
+    /* Overflow hidden */
+    overflow: hidden;
+}
+.hero-image {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    /* No top margin */
+    margin-top: 0;
+}
+
+.hero-text {
+    /* Position and sizing */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Some padding */
+    padding: 10px;
+    /* Text color: white */
+    color: white;
+    /* Custom font */
+    font-family: "Roboto", sans-serif;
+    /* Custom font styling */
+    font-size: 5em;
+    font-weight: 300;
+    text-align: center;
+}
+
+</style>
+</html>

@@ -370,7 +370,7 @@ export default {
 //     }
 }
 
-.timeline:after{
+.timeline:after{ 
     content: "";
     position: absolute;
     top: 0;
