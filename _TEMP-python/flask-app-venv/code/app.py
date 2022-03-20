@@ -2,6 +2,8 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 from security import authenticate, identity
+from flask import jsonify
+
 
 app = Flask(__name__)
 app.secret_key = 'Hosea'
@@ -9,7 +11,7 @@ api = Api(app)
 
 # jwt
 app.config['JWT_SECRET_KEY'] = 'Hosea'
-jwt = JWTManager(app, authenticate, identity) # /auth
+jwt = JWTManager(app) # /auth
 
 mock = [
     {
@@ -44,6 +46,55 @@ items = [
         'age': 22
     }
 ]
+
+# Login Class
+class Login(Resource):
+    @jwt_required
+    def get(self):
+        return {
+            'user': get_jwt_identity()
+        }
+    
+    def post(self):
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
+        if not username or not password:
+            return {'message': 'Missing username or password'}, 400
+        if authenticate(username, password):
+            return {
+                'message': 'Logged in as {}'.format(username),
+                'access_token': create_access_token(identity=username)
+            }
+        return {'message': 'Invalid credentials'}, 401
+
+# Protect a route with jwt_required, which will kick out requests
+# without a valid JWT present.
+class Protected(Resource):
+    @jwt_required()
+    def get(self):
+        return {
+            'protected': True,
+            'user': get_jwt_identity()
+        }
+    
+    @jwt_required()
+    def put(self, name):
+        data = request.get_json() 
+        # authenticate and identity
+        user = get_jwt_identity()
+        if user['name'] == name:
+            return {'message': 'You cannot change your own name'}, 400
+        authenticated_user = authenticate(user['name'], user['password'])
+        if authenticated_user:
+            user = authenticated_user
+        else:
+            return {'message': 'Invalid credentials'}, 401
+        # update user
+        user['name'] = data.get('name')
+        user['age'] = data.get('age')
+        return {'message': 'User updated'}, 200
+
 
 # Student Class
 class Student(Resource):
@@ -168,9 +219,10 @@ class Mock(Resource):
             return items
 
 
-
+api.add_resource(Login, '/login')
+api.add_resource(Protected, '/protected')
 api.add_resource(Student, '/student/<string:name>')
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(Items, '/items')
 api.add_resource(Mock, '/mock')
-app.run(debug=True)
+app.run(port=5000)

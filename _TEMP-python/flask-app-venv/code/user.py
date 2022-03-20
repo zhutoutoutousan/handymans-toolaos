@@ -14,6 +14,9 @@ class User:
     def __repr__(self):
         return f'{self.name} {self.email} {self.password}'
     
+    def __getitem__(self, item):
+        return self.json()[item]
+
     def json(self):
         return {
             'id': self.id,
