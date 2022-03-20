@@ -13,4 +13,4 @@ def authenticate(username, password):
 
 def identity(payload):
     user_id = payload['identity']
-    return userid_mapping.get(user_id, None)
+    return User.find_by_id(user_id)
