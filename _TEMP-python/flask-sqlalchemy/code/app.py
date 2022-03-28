@@ -2,8 +2,13 @@ from flask import Flask, jsonify, request, abort
 from flask_restful import Api, Resource, reqparse
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 from security import authenticate, identity
-from user import UserRegister
-from item import Item, ItemList
+from model.item import ItemModel
+from model.store import StoreModel
+from model.user import UserModel
+from resources.user import UserRegister
+from resources.store import Store, StoreList
+from resources.item import Item, ItemList
+
 
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True

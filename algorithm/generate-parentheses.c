@@ -47,5 +47,7 @@ char ** generateParenthesis(int n, int* returnSize){
         right = 0;
     }
     *returnSize = count;
+    // Free memory
+    free(*str);
     return result;
 }
