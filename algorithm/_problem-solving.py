@@ -1,12 +1,16 @@
-# TODO: https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem?isFullScreen=true&h_r=next-challenge&h_v=zen
+# The first line contains integers n and m separated by a space.
+# The second line contains  integers, the elements of the array.
+# The third and fourth lines contain m integers, set A and set B, respectively.
+# Output a single integer, your total happiness.
 if __name__ == '__main__':
-    n = int(input())
-    arr = map(int, input().split())
-    arr = list(arr)
-
-    # Sort the array in descending order, return the second max value
-    arr.sort(reverse=True)
-    for i in range(len(arr)):
-        if arr[i] != arr[0]:
-            print(arr[i])
-            break
+    n, m = map(int, input().split())
+    arr = list(map(int, input().split()))
+    A = set(map(int, input().split()))
+    B = set(map(int, input().split()))
+    happiness = 0
+    for i in arr:
+        if i in A:
+            happiness += 1
+        elif i in B:
+            happiness -= 1
+    print(happiness)
