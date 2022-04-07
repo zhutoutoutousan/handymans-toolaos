@@ -11,3 +11,7 @@ node_modules
 *.data
 *.framework.js
 *.loader.js
+
+# Fucker file
+*.mp4
+*.mp3
