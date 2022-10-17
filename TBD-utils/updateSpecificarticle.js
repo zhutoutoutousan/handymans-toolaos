@@ -109,3 +109,18 @@ const diffArray = (array1, array2) => {
     let array2Ids = array2.map(item => item.id)
     return [...array1Ids.filter(id => !array2Ids.includes(id)), ...array2Ids.filter(id => !array1Ids.includes(id))]
 }
+
+// Convert string format like firstname.middlename.lastname@xxx.com to Firstname Lastname, the format can be without middlename
+const convertEmailToName = (email) => {
+    let name = email.split('@')[0]
+    let nameArray = name.split('.')
+    // Edge Case: Only firstname
+    if (nameArray.length === 1) {
+        return nameArray[0].charAt(0).toUpperCase() + nameArray[0].slice(1)
+    }
+    if (nameArray.length === 2) {
+        return nameArray[0].charAt(0).toUpperCase() + nameArray[0].slice(1) + ' ' + nameArray[1].charAt(0).toUpperCase() + nameArray[1].slice(1)
+    } else if (nameArray.length === 3) {
+        return nameArray[0].charAt(0).toUpperCase() + nameArray[0].slice(1) + ' ' + nameArray[2].charAt(0).toUpperCase() + nameArray[2].slice(1)
+    }
+}
